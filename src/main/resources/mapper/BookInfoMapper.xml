@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fine.datavz.mapper.BookInfoMapper">
+    <!--定义表字段名与实体属性名映射-->
+    <resultMap id="BookInfoMap" type="com.fine.datavz.pojo.BookInfo">
+        <result property="time" column="publishtime"/>
+    </resultMap>
+
+    <select id="findAllD">
+        SELECT * FROM doubanbook;
+    </select>
+    <select id="getStarD">
+        SELECT star FROM doubanbook;
+    </select>
+    <select id="getPublishtimeD">
+        SELECT publishtime FROM doubanbook;
+    </select>
+    <select id="getBooknameD">
+        SELECT bookname FROM doubanbook;
+    </select>
+    <select id="getPriceD">
+        SELECT price FROM doubanbook;
+    </select>
+    <select id="getPressD">
+        SELECT press FROM doubanbook;
+    </select>
+    <select id="findAllA">
+        SELECT * FROM amazonbook;
+    </select>
+    <select id="getStarA">
+        SELECT star FROM amazonbook;
+    </select>
+    <select id="getPublishtimeA">
+        SELECT publishtime FROM amazonbook;
+    </select>
+    <select id="getBooknameA">
+        SELECT bookname FROM amazonbook;
+    </select>
+    <select id="getPressA">
+        SELECT press FROM amazonbook;
+    </select>
+
+</mapper>
